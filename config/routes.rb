@@ -1,5 +1,15 @@
 Timail::Application.routes.draw do
 
+  resources :entregas
+
+  resources :tarefas
+
+  resources :alunos
+
+  resources :professors
+
+  resources :materias
+
   get "home/index"
 
   root :to => "home#index"

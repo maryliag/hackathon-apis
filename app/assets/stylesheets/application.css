@@ -13,8 +13,18 @@
  */
 
  .header {
- 	width: 100%;
+ 	width: 98%;
  	height: 100px;
- 	background-color: #000000;
+ 	border: lightgray solid 1px;
+ 	border-radius: 10px;
+ 	margin: 10px;
+ }
 
+ .side_bar {
+ 	height: 100%;
+ 	width: 200px;
+ 	border: lightgray solid 1px;
+ 	border-radius: 10px;
+ 	margin: 10px;
+ 	float: left;
  }

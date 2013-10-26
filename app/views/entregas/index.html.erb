@@ -1,17 +1,15 @@
-<h1>Listing entregas</h1>
+<h4>Entregas</h4>
 
 <table>
   <tr>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @entregas.each do |entrega| %>
   <tr>
-    <td><%= link_to 'Show', entrega %></td>
-    <td><%= link_to 'Edit', edit_entrega_path(entrega) %></td>
-    <td><%= link_to 'Destroy', entrega, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><a href="<%= entrega.url%>"><%= entrega.nome%></a></td>
+    <td><%= link_to 'Excluir', entrega, method: :delete, data: { confirm: 'Deseja mesmo excluir esta entrega?' } %></td>
   </tr>
 <% end %>
 </table>

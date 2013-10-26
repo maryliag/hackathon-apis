@@ -2,7 +2,7 @@ class EntregasController < ApplicationController
   # GET /entregas
   # GET /entregas.json
   def index
-    @entregas = Entrega.all
+    @entregas = Tarefa.find(params[:tarefa_id]).todas_entregas.all
 
     respond_to do |format|
       format.html # index.html.erb

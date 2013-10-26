@@ -16,15 +16,22 @@
  	width: 98%;
  	height: 100px;
  	border: lightgray solid 1px;
- 	border-radius: 10px;
+ 	border-radius: 7px;
  	margin: 10px;
  }
 
  .side_bar {
  	height: 100%;
- 	width: 200px;
+ 	width: 17%;
  	border: lightgray solid 1px;
- 	border-radius: 10px;
+ 	border-radius: 7px;
  	margin: 10px;
+ 	margin-top: 0px;
+ 	float: left;
+ }
+
+ .content {
+ 	height: 100%;
+ 	width: 80%;
  	float: left;
  }

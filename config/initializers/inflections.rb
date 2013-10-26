@@ -16,4 +16,5 @@
 
 ActiveSupport::Inflector.inflections do |inflect|
 	inflect.plural /^(a)$/i, '\1as'
+	inflect.irregular 'materia', 'materias'
 end

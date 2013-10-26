@@ -2,7 +2,7 @@ class TarefasController < ApplicationController
   # GET /tarefas
   # GET /tarefas.json
   def index
-    @tarefas = Tarefa.all
+    @tarefas = Materia.find(params[:materia_id]).todas_tarefas.all.asc(:nome)
 
     respond_to do |format|
       format.html # index.html.erb

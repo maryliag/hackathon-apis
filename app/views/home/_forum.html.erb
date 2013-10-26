@@ -1,0 +1,25 @@
+<script src='https://swww.tokbox.com/webrtc/v2.0/js/TB.min.js'></script>
+<script src='https://swww.tokbox.com/v1.1/js/TB.min.js'></script>
+<script src='http://static.opentok.com/v1.1/js/TB.min.js'></script>
+
+<p> oiee </p>
+
+<div id="myPublisherDiv"></div>
+<script type="text/javascript">
+  // Initialize API key, session, and token...
+  // Think of a session as a room, and a token as the key to get in to the room
+  // Sessions and tokens are generated on your server and passed down to the client
+  var apiKey = "28210792";
+  var sessionId = "2_MX4yODIxMDc5Mn4xMjcuMC4wLjF-U2F0IE1heSAwNCAxNToxMjoyMiBQRFQgMjAxM34wLjk2MjM1MjR-";
+  var token = "T1==cGFydG5lcl9pZD0yODIxMDc5MiZzZGtfdmVyc2lvbj10YnJ1YnktdGJyYi12MC45MS4yMDExLTAyLTE3JnNpZz02MjQwMDdjMWRlZjA1M2M1ODE1NTY3YTYyMmZkNmI2NzcwZTg1ZDE2OnJvbGU9cHVibGlzaGVyJnNlc3Npb25faWQ9JmNyZWF0ZV90aW1lPTEzNjc3MDgyMTcmbm9uY2U9MC4yNjU2NTkzMjU5NTM4ODM0JmV4cGlyZV90aW1lPTEzNjc3OTQ2MTcmY29ubmVjdGlvbl9kYXRhPQ==";
+
+  // Initialize session, set up event listeners, and connect
+  var session = TB.initSession(sessionId);
+  session.addEventListener('sessionConnected', sessionConnectedHandler);
+  session.connect(apiKey, token);
+  
+  function sessionConnectedHandler(event) {
+    var publisher = TB.initPublisher(apiKey, 'myPublisherDiv');
+    session.publish(publisher);
+  }
+</script>

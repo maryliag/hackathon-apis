@@ -1,27 +1,18 @@
-<h1>Listing tarefas</h1>
 
 <table>
   <tr>
-    <th>Nome</th>
-    <th>Descricao</th>
-    <th>Entrega</th>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @tarefas.each do |tarefa| %>
+  <% tudo = tarefa.nome + "    " + tarefa.descricao + "       " + tarefa.entrega.day.to_s + "/" + tarefa.entrega.month.to_s + "/" +  tarefa.entrega.year.to_s + " - " + tarefa.entrega.hour.to_s + ":" + tarefa.entrega.min.to_s %>
   <tr>
-    <td><%= tarefa.nome %></td>
-    <td><%= tarefa.descricao %></td>
-    <td><%= tarefa.entrega %></td>
-    <td><%= link_to 'Show', tarefa %></td>
-    <td><%= link_to 'Edit', edit_tarefa_path(tarefa) %></td>
-    <td><%= link_to 'Destroy', tarefa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to tudo , :controller => 'entregas', :action => 'index', :tarefa_id => tarefa %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Tarefa', new_tarefa_path %>
+<%= link_to 'Nova Tarefa', new_tarefa_path %>

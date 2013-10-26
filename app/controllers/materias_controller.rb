@@ -1,4 +1,4 @@
-class MateriasController < ApplicationController
+  class MateriasController < ApplicationController
   # GET /materias
   # GET /materias.json
   def index
@@ -71,12 +71,12 @@ class MateriasController < ApplicationController
 
   # DELETE /materias/1
   # DELETE /materias/1.json
-  def destroy
+  def delete
     @materia = Materia.find(params[:id])
     @materia.destroy
 
     respond_to do |format|
-      format.html { redirect_to materias_index_url }
+      format.html { redirect_to :action => 'index' }
       format.json { head :no_content }
     end
   end
